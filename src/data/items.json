@@ -1,0 +1,25 @@
+[{
+    "id":1,
+    "name":"Feed a Cat",
+    "price":7.5,
+    "imgUrl":"public/imgs/catfood.jpg"
+},
+{
+    "id":2,
+    "name":"Adopt a Cat",
+    "price":300.0,
+    "imgUrl":"../imgs/cathome.jpg"
+},
+{
+    "id":3,
+    "name":"Buy Cat Toys",
+    "price":4.5,
+    "imgUrl":"../imgs/cattoy.jpg"
+},
+{
+    "id":4,
+    "name":"Donate",
+    "price":10.0,
+    "imgUrl":"../imgs/catlucky.jpg"
+}
+]
