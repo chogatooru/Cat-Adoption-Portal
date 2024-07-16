@@ -7,7 +7,7 @@
 {
     "id":2,
     "name":"Adopt a Cat",
-    "price":300.0,
+    "price":80.0,
     "imgUrl":"../imgs/cathome.jpg"
 },
 {

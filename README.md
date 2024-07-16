@@ -1,30 +1,51 @@
-# React + TypeScript + Vite
+# Cat Adoption Donation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to our Cat Adoption Donation Website project! This repository contains the source code for a website dedicated to helping stray and abandoned cats find loving homes and providing a platform for donations to support their care.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Home Page:** Welcome visitors with an overview of the website and a call to action to visit the store.
+- **About Page:** Provides information about the organization, its mission, team, and history.
+- **Store Page:** Lists items available for purchase, with each item detailed in a separate component.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+To get started with the project, follow these steps:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/cat-adoption-donation.git
+    cd cat-adoption-donation
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3. **Start the development server:**
+    ```bash
+    npm start
+    ```
+
+## Usage
+
+Once the development server is running, you can visit the website at `http://localhost:3000` in your web browser. The website consists of the following pages:
+
+- **Home Page:** Provides a welcoming message and a button to navigate to the store page.
+- **About Page:** Offers detailed information about the organization, its mission, and its team.
+- **Store Page:** Displays items available for purchase to support the organization.
+
+## Project Structure
+
+The project structure is organized as follows:
+

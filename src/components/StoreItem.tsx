@@ -1,4 +1,6 @@
 import { Card } from "react-bootstrap"
+import { formatCurrency } from "../utilities/formatCurrency"
+import { useShoppingCart } from "../context/ShoppingCartContext"
 
 type StoreItemProps = {
     id: number,
@@ -7,15 +9,53 @@ type StoreItemProps = {
     imgUrl: string
 }
 
+export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
+    const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart } = useShoppingCart()
+    const quantity = getItemQuantity(id)
 
-export function StoreItem ({id, name, price, imgUrl}: StoreItemProps){
-    return <Card>
-        <Card.Img variant="top" src={imgUrl} height="200px" style={{objectFit:"cover"}}/>
-        <Card.Body className="d-flex flex-column">
-            <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
-                <span className="fs-2">{name}</span>
-                <span className="ms-2 text-muted">{price}</span>
-            </Card.Title>
-        </Card.Body>
-    </Card>
+    return (
+        <Card>
+            <Card.Img variant="top" src={imgUrl} height="200px" style={{ objectFit: "cover" }} />
+            <Card.Body className="d-flex flex-column">
+                <Card.Title className="d-flex justify-content-between align-items-baseline mb-4">
+                    <span className="fs-2">{name}</span>
+                    <span className="ms-2 text-muted">{formatCurrency(price)}</span>
+                </Card.Title>
+                <div className="mt-auto">
+                    {quantity === 0 ? (
+                        <button 
+                            className="w-100 btn btn-outline-primary"
+                            onClick={() => increaseCartQuantity(id)}
+                        >
+                            + Add To Cart
+                        </button>
+                    ) : (
+                        <div className="d-flex align-items-center flex-column" style={{ gap: ".5rem" }}>
+                            <div className="d-flex align-items-center justify-content-center" style={{ gap: ".5rem" }}>
+                                <button 
+                                    className="btn btn-outline-primary"
+                                    onClick={() => decreaseCartQuantity(id)}
+                                >
+                                    -
+                                </button>
+                                <span>{quantity}</span>
+                                <button 
+                                    className="btn btn-outline-primary"
+                                    onClick={() => increaseCartQuantity(id)}
+                                >
+                                    +
+                                </button>
+                            </div>
+                            <button 
+                                className="btn btn-danger"
+                                onClick={() => removeFromCart(id)}
+                            >
+                                Remove
+                            </button>
+                        </div>
+                    )}
+                </div>
+            </Card.Body>
+        </Card>
+    )
 }
