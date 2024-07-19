@@ -36,3 +36,8 @@ jobs:
         curl -X POST -u $AZURE_USER_NAME:$AZURE_USER_PWD \
           --data-binary @"build.zip" \
           https://$AZURE_PUBLISH_URL/api/zipdeploy
+
+      run: |
+        curl -X POST -u $AZURE_USER_NAME:$AZURE_USER_PWD \
+          --data-binary @"build.zip" \
+          https://$AZURE_PUBLISH_URL/api/zipdeploy
