@@ -24,3 +24,15 @@ jobs:
     - name: Build the React app
       run: npm run build
 
+    - name: Archive production-ready files
+      run: zip -r build.zip build
+
+    - name: Deploy to Azure Web App
+      env:
+        AZURE_PUBLISH_URL: ${{cat-adoption.scm.azurewebsites.net:443 }}
+        AZURE_USER_NAME: ${{ $Cat-Adoption }}
+        AZURE_USER_PWD: ${{ qCsg2h4wsC41Swok8Hxi8TasSS1nYXmhwE0SLDkCsGMKodAhq9lJQzBziWqK }}
+      run: |
+        curl -X POST -u $AZURE_USER_NAME:$AZURE_USER_PWD \
+          --data-binary @"build.zip" \
+          https://$AZURE_PUBLISH_URL/api/zipdeploy
