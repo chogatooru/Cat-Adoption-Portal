@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Updated to v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3  # Updated to v3
       with:
         node-version: '14'
 
@@ -23,4 +23,17 @@ jobs:
 
     - name: Build the React app
       run: npm run build
+
+    - name: Archive production-ready files
+      run: zip -r build.zip dist
+
+    - name: Deploy to Azure Web App
+      env:
+        AZURE_PUBLISH_URL: ${{ secrets.AZURE_PUBLISH_URL }}
+        AZURE_USER_NAME: ${{ secrets.AZURE_USER_NAME }}
+        AZURE_USER_PWD: ${{ secrets.AZURE_USER_PWD }}
+      run: |
+        curl -X POST -u $AZURE_USER_NAME:$AZURE_USER_PWD \
+          --data-binary @"build.zip" \
+          https://$AZURE_PUBLISH_URL/api/zipdeploy
 
