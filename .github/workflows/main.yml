@@ -18,9 +18,6 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Archive production-ready files
-      run: zip -r build.zip build
-
     - name: Deploy to Azure Web App
       env:
         AZURE_PUBLISH_URL: ${{ secrets.AZURE_PUBLISH_URL }}
