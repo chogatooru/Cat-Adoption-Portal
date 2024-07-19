@@ -32,6 +32,11 @@ jobs:
     - name: Deploy to Azure Web App
       uses: Azure/webapps-deploy@v2
       with:
+        app-name: 'cat-adoption'
+        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+        package: ${{ github.workspace }}/dist
+
+      with:
         app-name: 'Cat-Adoption'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ github.workspace }}/dist
