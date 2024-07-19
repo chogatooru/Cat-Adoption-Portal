@@ -29,9 +29,9 @@ jobs:
 
     - name: Deploy to Azure Web App
       env:
-        AZURE_PUBLISH_URL: ${{cat-adoption.scm.azurewebsites.net:443 }}
-        AZURE_USER_NAME: ${{ $Cat-Adoption }}
-        AZURE_USER_PWD: ${{ qCsg2h4wsC41Swok8Hxi8TasSS1nYXmhwE0SLDkCsGMKodAhq9lJQzBziWqK }}
+        AZURE_PUBLISH_URL: ${{ secrets.AZURE_PUBLISH_URL }}
+        AZURE_USER_NAME: ${{ secrets.AZURE_USER_NAME }}
+        AZURE_USER_PWD: ${{ secrets.AZURE_USER_PWD }}
       run: |
         curl -X POST -u $AZURE_USER_NAME:$AZURE_USER_PWD \
           --data-binary @"build.zip" \
