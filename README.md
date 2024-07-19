@@ -49,3 +49,78 @@ Once the development server is running, you can visit the website at `http://loc
 
 The project structure is organized as follows:
 
+cat-adoption-donation/
+├── public/
+│ ├── index.html
+│ └── ...
+├── src/
+│ ├── components/
+│ │ ├── StoreItem.tsx
+│ │ └── ...
+│ ├── data/
+│ │ └── items.json
+│ ├── hooks/
+│ │ └── useLocalStorage.ts
+│ ├── pages/
+│ │ ├── Home.tsx
+│ │ ├── About.tsx
+│ │ └── Store.tsx
+│ ├── context/
+│ │ └── ShoppingCartContext.tsx
+│ ├── utilities/
+│ │ └── formatCurrency.ts
+│ ├── App.tsx
+│ ├── index.tsx
+│ └── ...
+├── package.json
+├── README.md
+└── ...
+
+
+## Contributing
+
+We welcome contributions to improve our project. To contribute, please follow these steps:
+
+1. **Fork the repository:**
+    Click the "Fork" button at the top right corner of this page to create a copy of the repository under your own GitHub account.
+
+2. **Clone your fork:**
+    ```bash
+    git clone https://github.com/yourusername/cat-adoption-donation.git
+    cd cat-adoption-donation
+    ```
+
+3. **Create a new branch:**
+    ```bash
+    git checkout -b your-branch-name
+    ```
+
+4. **Make your changes:**
+    Add your changes to the codebase.
+
+5. **Commit your changes:**
+    ```bash
+    git add .
+    git commit -m "Description of your changes"
+    ```
+
+6. **Push your changes:**
+    ```bash
+    git push origin your-branch-name
+    ```
+
+7. **Create a pull request:**
+    Go to the original repository on GitHub and click "New pull request" to submit your changes for review.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Credits
+
+Powered by Monica.
+
+---
+
+Thank you for visiting our Cat Adoption Donation Website project! We hope this project helps make a difference in the lives of many cats in need.
+
