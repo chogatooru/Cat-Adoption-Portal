@@ -1,5 +1,5 @@
 import { Button, Container, Navbar as NavbarBs } from "react-bootstrap"
-import { NavLink, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Nav } from "react-bootstrap"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 

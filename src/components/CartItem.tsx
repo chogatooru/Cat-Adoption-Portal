@@ -1,7 +1,6 @@
 import { Stack } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import storeItems from "../data/items.json"; // 确保正确导入数据文件
-import { formatCurrency } from "../utilities/formatCurrency";
+import storeItems from "../data/items.json"; 
 
 type CartItemProps = {
     id: number;
