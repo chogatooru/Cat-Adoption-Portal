@@ -13,6 +13,9 @@ export function Store() {
                     </Col>
                 ))}
             </Row>
+            <footer className="mt-5">
+                <p>&copy; 2024 Powered by Monica.</p>
+            </footer>
         </>
     );
 }

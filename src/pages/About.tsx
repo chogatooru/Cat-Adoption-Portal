@@ -43,6 +43,9 @@ export function About() {
                     </div>
                 </div>
             </div>
+            <footer className="mt-5">
+                <p>&copy; 2024 Powered by Monica.</p>
+            </footer>
         </div>
     );
 }

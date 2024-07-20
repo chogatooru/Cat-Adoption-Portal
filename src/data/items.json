@@ -2,7 +2,7 @@
     "id":1,
     "name":"Feed a Cat",
     "price":7.5,
-    "imgUrl":"public/imgs/catfood.jpg"
+    "imgUrl":"../imgs/catfood.jpg"
 },
 {
     "id":2,
