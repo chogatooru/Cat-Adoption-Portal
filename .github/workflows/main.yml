@@ -24,13 +24,6 @@ jobs:
     - name: Build the React app
       run: npm run build
 
-    - name: List files after build
-      run: |
-        echo "Listing all files in the workspace:"
-        ls -la
-        echo "Listing files in the dist directory:"
-        ls -la dist
-
     - name: Log in to Azure
       uses: azure/login@v1
       with:
@@ -39,11 +32,6 @@ jobs:
     - name: Deploy to Azure Web App
       uses: Azure/webapps-deploy@v2
       with:
-        app-name: 'cat-adoption'
-        publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-        package: ${{ github.workspace }}/dist
-
         app-name: 'Cat-Adoption'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ github.workspace }}/build
-
