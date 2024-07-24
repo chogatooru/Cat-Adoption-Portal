@@ -21,22 +21,18 @@ export function About() {
                     <h2>Meet Our Team</h2>
                     <div className="row">
                         <div className="col-md-3 team-member">
-                            <img src="team-member1.jpg" alt="Team Member 1" className="img-fluid rounded-circle"/>
                             <h4>Jane Doe</h4>
                             <p>Founder & CEO</p>
                         </div>
                         <div className="col-md-3 team-member">
-                            <img src="team-member2.jpg" alt="Team Member 2" className="img-fluid rounded-circle"/>
                             <h4>John Smith</h4>
                             <p>Veterinarian</p>
                         </div>
                         <div className="col-md-3 team-member">
-                            <img src="team-member3.jpg" alt="Team Member 3" className="img-fluid rounded-circle"/>
                             <h4>Emily Johnson</h4>
                             <p>Adoption Coordinator</p>
                         </div>
                         <div className="col-md-3 team-member">
-                            <img src="team-member4.jpg" alt="Team Member 4" className="img-fluid rounded-circle"/>
                             <h4>Michael Brown</h4>
                             <p>Volunteer Manager</p>
                         </div>
